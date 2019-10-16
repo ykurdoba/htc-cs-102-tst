@@ -3,19 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace MovieApplication
 {
-    class Movie
+    public class Movie
     {
         public string Title;
         public List<string> Actors;
         public string Genre;
         public double ReviewScore;
 
-        public void Watch()
+        public Movie(string title, string genre, double reviewScore)
         {
+            Title = title;
+            Genre = genre;
+            ReviewScore = reviewScore;
+        }
 
+        public void DisplayInformation()
+        {
+            MessageBox.Show($"Title: {Title} \nGenre: {Genre} \nReview Score: {ReviewScore}");
         }
     }
 }
