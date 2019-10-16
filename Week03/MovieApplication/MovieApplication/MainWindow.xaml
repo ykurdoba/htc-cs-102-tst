@@ -7,13 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="480.841" Width="688.551">
     <Grid>
-        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Height="45" Margin="58,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317"/>
-        <TextBox x:Name="reviewScoreTextBox" HorizontalAlignment="Left" Height="47" Margin="58,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317"/>
-        <TextBox x:Name="genreTextBox" HorizontalAlignment="Left" Height="45" Margin="58,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317"/>
-        <Label x:Name="titleLabel" Content="Title:" HorizontalAlignment="Left" Margin="58,100,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="genreTitle" Content="Genre:" HorizontalAlignment="Left" Margin="58,196,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="reviewScoreTitle" Content="Review Score:" HorizontalAlignment="Left" Margin="58,293,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="submitMovieButton" Content="Submit" HorizontalAlignment="Left" Margin="58,393,0,0" VerticalAlignment="Top" Width="91" Height="29" IsCancel="True" Click="submitMovieButton_Click"/>
+        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Height="47" Margin="32,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"/>
+        <TextBox x:Name="reviewScoreTextBox" HorizontalAlignment="Left" Height="47" Margin="455,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
+        <TextBox x:Name="genreTextBox" HorizontalAlignment="Left" Height="47" Margin="236,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181"/>
+        <Label x:Name="titleLabel" Content="Title:" HorizontalAlignment="Left" Margin="32,311,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="genreTitle" Content="Genre:" HorizontalAlignment="Left" Margin="236,311,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="reviewScoreTitle" Content="Review Score:" HorizontalAlignment="Left" Margin="455,311,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="submitMovieButton" Content="Submit" HorizontalAlignment="Left" Margin="559,411,0,0" VerticalAlignment="Top" Width="91" Height="29" IsCancel="True" Click="submitMovieButton_Click"/>
+        <ListView x:Name="MovieListView" HorizontalAlignment="Left" Height="198" Margin="144,70,0,0" VerticalAlignment="Top" Width="421">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width = "150" Header = "Title" DisplayMemberBinding="{Binding Title}" ></GridViewColumn>
+                    <GridViewColumn Width = "100" Header = "Genre" DisplayMemberBinding="{Binding Genre}" ></GridViewColumn>
+                    <GridViewColumn Width = "100" Header = "ReivewScore" DisplayMemberBinding="{Binding ReviewScore}" ></GridViewColumn>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>
