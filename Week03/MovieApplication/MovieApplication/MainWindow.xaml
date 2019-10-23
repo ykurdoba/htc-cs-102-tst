@@ -6,24 +6,33 @@
         xmlns:local="clr-namespace:MovieApplication"
         mc:Ignorable="d"
         Title="MainWindow" Height="480.841" Width="688.551">
-    <Grid>
-        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Height="47" Margin="32,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"/>
-        <TextBox x:Name="reviewScoreTextBox" HorizontalAlignment="Left" Height="47" Margin="455,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
-        <TextBox x:Name="genreTextBox" HorizontalAlignment="Left" Height="47" Margin="236,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181"/>
-        <Label x:Name="titleLabel" Content="Title:" HorizontalAlignment="Left" Margin="32,311,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="genreTitle" Content="Genre:" HorizontalAlignment="Left" Margin="236,311,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="reviewScoreTitle" Content="Review Score:" HorizontalAlignment="Left" Margin="455,311,0,0" VerticalAlignment="Top"/>
+    <Grid Margin="10,-10,-38,-31">
+        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Height="34" Margin="10,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
+        <TextBox x:Name="reviewScoreTextBox" HorizontalAlignment="Left" Height="34" Margin="322,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+        <TextBox x:Name="genreTextBox" HorizontalAlignment="Left" Height="34" Margin="161,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+        <Label x:Name="titleLabel" Content="Title:" HorizontalAlignment="Left" Margin="10,283,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="genreTitle" Content="Genre:" HorizontalAlignment="Left" Margin="161,283,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="reviewScoreTitle" Content="Review Score:" HorizontalAlignment="Left" Margin="322,283,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="directorTitle" Content="Director:" HorizontalAlignment="Left" Margin="488,283,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="directorTextBox" HorizontalAlignment="Left" Height="34" Margin="488,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+        <Label x:Name="lengthTitle" Content="Length:" HorizontalAlignment="Left" Margin="92,366,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.673,3.731"/>
+        <TextBox x:Name="lengthTextBox" HorizontalAlignment="Left" Height="34" Margin="92,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
         <Button x:Name="submitMovieButton" Content="Submit" HorizontalAlignment="Left" Margin="559,411,0,0" VerticalAlignment="Top" Width="91" Height="29" IsCancel="True" Click="submitMovieButton_Click"/>
-        <ListView x:Name="MovieListView" HorizontalAlignment="Left" Height="198" Margin="144,70,0,0" VerticalAlignment="Top" Width="421" MouseDoubleClick ="movieListView_MouseDoubleClick">
+        <ListView x:Name="MovieListView" HorizontalAlignment="Left" Height="198" Margin="0,36,0,0" VerticalAlignment="Top" Width="671" MouseDoubleClick ="movieListView_MouseDoubleClick">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width = "150" Header = "Title" DisplayMemberBinding="{Binding Title}" ></GridViewColumn>
-                    <GridViewColumn Width = "100" Header = "Genre" DisplayMemberBinding="{Binding Genre}" ></GridViewColumn>
-                    <GridViewColumn Width = "100" Header = "ReivewScore" DisplayMemberBinding="{Binding ReviewScore}" ></GridViewColumn>
+                    <GridViewColumn Width = "150" Header = "Genre" DisplayMemberBinding="{Binding Genre}" ></GridViewColumn>
+                    <GridViewColumn Width = "150" Header = "ReivewScore" DisplayMemberBinding="{Binding ReviewScore}" ></GridViewColumn>
+                    <GridViewColumn Width = "150" Header = "Director" DisplayMemberBinding="{Binding Director}" ></GridViewColumn>
+                    <GridViewColumn Width = "150" Header = "Length" DisplayMemberBinding="{Binding Length}" ></GridViewColumn>
+
 
                 </GridView>
             </ListView.View>
         </ListView>
+
+
 
     </Grid>
 </Window>
