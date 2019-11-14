@@ -30,9 +30,9 @@ namespace InterfacesIntro
             Animals = new ObservableCollection<Animal>();
 
             // make siome aminals
-            Frog frog = new Frog(4,"Bart",true);
-            Dog dog = new Dog("Labradoodle", 35, "Pax");
-            Duck duck = new Duck(4, "Moo");
+            Frog frog = new Frog(4,"Bart",true, 10);
+            Dog dog = new Dog("Labradoodle", 35, "Pax", 45);
+            Duck duck = new Duck(4, "Moo", 65);
 
             Animals.Add(frog);
             Animals.Add(dog);

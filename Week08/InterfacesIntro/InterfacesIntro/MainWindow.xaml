@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InheritanceIntro"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="300">
-    <StackPanel>
+        Title="MainWindow" Height="597.353" Width="1018.848">
+    <StackPanel Margin="0,0,583,461">
         <Button Click="SayName_Button_Click">Say Name</Button>
-        <ListView x:Name="lvAnimals" Height="100" MouseDoubleClick="LvAnimals_MouseDoubleClick">
+        <ListView x:Name="lvAnimals" Height="247" MouseDoubleClick="LvAnimals_MouseDoubleClick" Margin="0,0,-73,0">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="150" Header="Name" DisplayMemberBinding="{Binding Name}"/>
                     <GridViewColumn Width="150" Header="Height" DisplayMemberBinding="{Binding Height}"/>
+                    <GridViewColumn Width="150" Header="Weight" DisplayMemberBinding="{Binding Weight}"/>
                 </GridView>
             </ListView.View>
         </ListView>
