@@ -6,9 +6,26 @@
         xmlns:local="clr-namespace:InheritanceIntro"
         mc:Ignorable="d"
         Title="MainWindow" Height="597.353" Width="1018.848">
-    <StackPanel Margin="0,0,583,461">
-        <Button Click="SayName_Button_Click">Say Name</Button>
-        <ListView x:Name="lvAnimals" Height="247" MouseDoubleClick="LvAnimals_MouseDoubleClick" Margin="0,0,-73,0">
+    <StackPanel Margin="0,0,2,3">
+        <Button Click="SayName_Button_Click" RenderTransformOrigin="0.812,0.604" Height="26" Margin="0,0,-50,0" Content="Say Name">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.065"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <ListView x:Name="lvAnimals" Height="122" MouseDoubleClick="LvAnimals_MouseDoubleClick" Margin="0,0,-762,0" RenderTransformOrigin="0.5,0.5">
+            <ListView.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.055"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ListView.RenderTransform>
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="150" Header="Name" DisplayMemberBinding="{Binding Name}"/>
