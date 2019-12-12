@@ -5,17 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="570.699" Width="674.134">
+        Title="MainWindow" Height="570.699" Width="1036.461">
     <Grid Margin="0,0,-278,-206">
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="224" Margin="319,0,0,0" VerticalAlignment="Top" Width="360">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="176" Margin="319,0,0,0" VerticalAlignment="Top" Width="647" SelectionChanged="listView_SelectionChanged">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Width="107" Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Width="107" Header="Weight" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Width="107" Header="Height" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Width="107" Header="Age" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Width="107" Header="Type" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Width="107" Header="Rating" DisplayMemberBinding="{Binding Name}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <Button x:Name="startButton" Content="Begin to create my list" HorizontalAlignment="Left" VerticalAlignment="Top" Width="169" Margin="10,28,0,0" Height="37" Click="startButton_Click"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="33" Margin="11,91,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="168" TextChanged="typeOfList_TextChanged"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="33" Margin="11,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168" TextChanged="typeOfList_TextChanged"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="11,70,0,0" TextWrapping="Wrap" Text="What would you like to make a list of?" VerticalAlignment="Top" Width="269"/>
         <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,144,0,0" TextWrapping="Wrap" Text="Select three categories you would like to see in your list. (Please make sure they apply to your topic)" VerticalAlignment="Top" Width="309"/>
         <Button x:Name="submitIntro" Content="Submit" HorizontalAlignment="Left" Margin="80,350,0,0" VerticalAlignment="Top" Width="60" Height="25" Click="submitIntro_Click"/>

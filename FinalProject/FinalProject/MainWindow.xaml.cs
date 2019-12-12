@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -57,9 +58,17 @@ namespace FinalProject
         private void submitIntro_Click(object sender, RoutedEventArgs e)
         {
             string listSelection = textBox1.Text;
-          //categoryChoices.SelectedItems
+            List<string> categories = new List<string>();
+            categories.AddRange(categoryChoices.SelectedItems.Cast<string>().ToList<string>());
+                
 
+          
+          
         }
 
+        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
